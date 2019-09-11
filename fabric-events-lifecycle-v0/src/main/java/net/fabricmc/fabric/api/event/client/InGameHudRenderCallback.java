@@ -5,12 +5,10 @@ import net.fabricmc.fabric.api.event.EventFactory;
 
 public interface InGameHudRenderCallback {
 	public static final Event<InGameHudRenderCallback> EVENT = EventFactory.createArrayBacked(InGameHudRenderCallback.class,
-		(listeners) -> {
-			return (screenWidth, screenHeight, delta) -> {
-				for (InGameHudRenderCallback event : listeners) {
-					event.render(screenWidth, screenHeight, delta);
-				}
-			};
+		listeners -> (screenWidth, screenHeight, delta) -> {
+			for (InGameHudRenderCallback event : listeners) {
+				event.render(screenWidth, screenHeight, delta);
+			}
 		}
 	);
 
