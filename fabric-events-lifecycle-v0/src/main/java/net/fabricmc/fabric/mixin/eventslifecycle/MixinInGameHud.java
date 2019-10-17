@@ -1,6 +1,6 @@
 package net.fabricmc.fabric.mixin.eventslifecycle;
 
-import net.fabricmc.fabric.api.event.client.InGameHudRenderCallback;
+import net.fabricmc.fabric.api.event.client.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.InGameHud;
 import org.spongepowered.asm.mixin.Final;
@@ -18,6 +18,6 @@ public class MixinInGameHud {
 
 	@Inject(method = "render", at = @At("RETURN"))
 	public void render(float delta, CallbackInfo callbackInfo) {
-		InGameHudRenderCallback.EVENT.invoker().render(client.window.getScaledWidth(), client.window.getScaledHeight(), delta);
+		HudRenderCallback.EVENT.invoker().render(client.window.getScaledWidth(), client.window.getScaledHeight(), delta);
 	}
 }
