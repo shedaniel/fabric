@@ -16,7 +16,7 @@ public interface HudRenderCallback {
 	/**
 	 * Called when the hud is rendered, which is displayed in game, in a world.
 	 *
-	 * @param delta the number of ticks passed since the last tick
+	 * @param delta The number of frames passed since the last full tick
 	 */
 	void render(float delta);
 }
