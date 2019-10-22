@@ -16,7 +16,7 @@ public interface HudRenderCallback {
 	/**
 	 * Called when the hud is rendered, which is displayed in game, in a world.
 	 *
-	 * @param delta The number of frames passed since the last full tick
+	 * See {@link net.minecraft.util.math.MathHelper#lerp(float, float, float)} for interpolating.
 	 */
 	void render(float delta);
 }
