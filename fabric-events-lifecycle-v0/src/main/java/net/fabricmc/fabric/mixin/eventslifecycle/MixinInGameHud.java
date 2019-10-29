@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(InGameHud.class)
 public class MixinInGameHud {
 
-	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/platform/GlStateManager;color4f(FFFF)V", ordinal = 3))
+	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/platform/GlStateManager;disableLighting()V", ordinal = 0, shift = At.Shift.BY, by = -3))
 	public void render(float delta, CallbackInfo callbackInfo) {
 		HudRenderCallback.EVENT.invoker().render(delta);
 	}
