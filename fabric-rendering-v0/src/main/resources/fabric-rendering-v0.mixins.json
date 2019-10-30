@@ -6,6 +6,7 @@
     "MixinBlockColorMap",
     "MixinBlockEntityRenderManager",
     "MixinEntityRenderManager",
+    "MixinInGameHud",
     "MixinItemColorMap",
     "MixinWorldRenderer"
   ],
