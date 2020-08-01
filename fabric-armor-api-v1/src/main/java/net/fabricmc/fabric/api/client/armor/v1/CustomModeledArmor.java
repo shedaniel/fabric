@@ -25,7 +25,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
 /**
- * Implement this interface on an Item which you would like to have a custom armor model.
+ * Implement this interface on an {@link net.minecraft.item.ArmorItem} which you would like to have a custom armor model.
  */
 public interface CustomModeledArmor {
 	/**
@@ -38,7 +38,7 @@ public interface CustomModeledArmor {
 	 * @return The model of the armor piece. Should never be null.
 	 */
 	@Environment(EnvType.CLIENT)
-	default BipedEntityModel<LivingEntity> getArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, BipedEntityModel<LivingEntity> defaultModel) {
+	default BipedEntityModel<LivingEntity> getCustomArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, BipedEntityModel<LivingEntity> defaultModel) {
 		return defaultModel;
 	}
 }

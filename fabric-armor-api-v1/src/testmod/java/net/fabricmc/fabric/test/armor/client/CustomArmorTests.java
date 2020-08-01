@@ -55,12 +55,12 @@ public class CustomArmorTests implements ClientModInitializer {
 		}
 
 		@Override
-		public BipedEntityModel<LivingEntity> getArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, BipedEntityModel<LivingEntity> defaultModel) {
+		public BipedEntityModel<LivingEntity> getCustomArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot, BipedEntityModel<LivingEntity> defaultModel) {
 			return model;
 		}
 
 		@Override
-		public String getArmorTexture(LivingEntity entity, ItemStack stack, EquipmentSlot slot, boolean secondLayer, String suffix) {
+		public String getCustomArmorTexture(LivingEntity entity, ItemStack stack, EquipmentSlot slot, boolean secondLayer, String suffix) {
 			return "fabric-armor-api-v1-testmod:thing/i_have_a_cube.png";
 		}
 	}
@@ -93,7 +93,7 @@ public class CustomArmorTests implements ClientModInitializer {
 		}
 
 		@Override
-		public String getArmorTexture(LivingEntity entity, ItemStack stack, EquipmentSlot slot, boolean secondLayer, String suffix) {
+		public String getCustomArmorTexture(LivingEntity entity, ItemStack stack, EquipmentSlot slot, boolean secondLayer, String suffix) {
 			return "fabric-armor-api-v1-testmod:thing/amazing.png";
 		}
 	}
